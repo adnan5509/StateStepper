@@ -7,6 +7,7 @@ import { CounterControlsComponent } from './counter-controls/counter-controls.co
 import { StoreModule } from '@ngrx/store';
 import { counterReducer } from './store/counter.reducer';
 import { CommonModule } from '@angular/common';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { CommonModule } from '@angular/common';
   ],
   imports: [BrowserModule, CommonModule, StoreModule.forRoot({
     counter: counterReducer
-  })],
+  }), EffectsModule.forRoot([])],
   providers: [],
   bootstrap: [AppComponent],
 })
