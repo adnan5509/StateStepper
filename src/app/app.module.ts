@@ -8,6 +8,7 @@ import { StoreModule } from '@ngrx/store';
 import { counterReducer } from './store/counter.reducer';
 import { CommonModule } from '@angular/common';
 import { EffectsModule } from '@ngrx/effects';
+import { CounterEffects } from './store/counter.effect';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { EffectsModule } from '@ngrx/effects';
   ],
   imports: [BrowserModule, CommonModule, StoreModule.forRoot({
     counter: counterReducer
-  }), EffectsModule.forRoot([])],
+  }), EffectsModule.forRoot([CounterEffects])],
   providers: [],
   bootstrap: [AppComponent],
 })
